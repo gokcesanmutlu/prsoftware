@@ -6,6 +6,7 @@
 hr {
   color: #eaecf0;
 }
+
 p {
   color: #667085;
   font-size: 20px;
@@ -18,12 +19,18 @@ p {
 .question span {
   color: #667085;
 }
+
 .btn {
   background-color: #7f56d9;
   color: white;
   border: none;
   padding: 16px 28px 16px 28px;
   border-radius: 0.5rem;
+}
+
+.gri-border{
+  border: solid 1px #D0D5DD;
+ 
 }
 
 * {
@@ -46,6 +53,8 @@ p {
   width: 100vw;
   border: 1xp solid #f2f4f7;
   position: fixed;
+  background-color: white;
+  z-index: 80;
 }
 
 .pad {
@@ -118,5 +127,6 @@ footer {
 
   .buttons {
     flex-direction: column;
+    width: 100%;
   }
 }

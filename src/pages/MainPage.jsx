@@ -45,15 +45,15 @@ const MainPage = () => {
   };
 
   return (
-    <>
+    <div className="">
       {/* <Header handleContactHeader={handleContactHeader} /> */}
 
       {/* SECTION BANNER */}
       <section className="w-full h-auto">
         <div className="flex flex-col gap-3">
-          <div className="text-[#7f56d9] bg-[#F9F5FF] text-[14px] flex justify-center gap-4 py-1">
+          <div className="text-[#7f56d9] bg-[#F9F5FF] text-[14px] flex justify-center items-center gap-4 py-1">
             <button>New feature</button>
-            <button className="home-right flex gap-1">
+            <button className="home-right flex  justify-center items-center gap-1">
               <span>Check out the team dashboard</span>
               <img src="arrow-right.png" alt="" />
             </button>
@@ -72,13 +72,13 @@ const MainPage = () => {
             and retain more users. Trusted by over 4,000 startups.
           </p>
 
-          <div className="buttons flex justify-center gap-4 rounded-[8px] mt-[48px] mb-5">
-            <button className="w-[143px] h-[60px] flex gap-2 items-center justify-center bg-white text-lg font-semibold border-2 border-solid border-gray-200 px-2 py-1 rounded-[8px]">
+          <div className="buttons flex justify-center gap-4 rounded-[8px] mt-[48px] mb-5 ">
+            <button className="gri-border xs:w-full min-w-[143px] h-[60px] flex gap-2 items-center justify-center bg-white text-lg font-semibold px-2 py-1 rounded-[8px]">
               <img src="Icon.svg" alt="" />
               <span>Demo</span>
             </button>
             <button
-              className="btn w-[143px] h-[60px] "
+              className="btn xs:w-full min-w-[143px] h-[60px]"
               onClick={handleContactHeader}
             >
               Contact Us
@@ -185,7 +185,7 @@ const MainPage = () => {
             Join over 4,000+ startups already growing with us.
           </p>
           <div className="buttons flex justify-center gap-2 rounded-[8px] pb-2">
-            <button className="xs:w-full min-w-[143px] h-[60px] flex gap-2 items-center justify-center bg-white text-lg font-semibold border-2 border-solid border-gray-200 px-2 py-1 rounded-[8px]">
+            <button className="xs:w-full min-w-[143px] h-[60px] flex gap-2 items-center justify-center bg-white text-lg font-semibold gri-border px-2 py-1 rounded-[8px]">
               Learn More
             </button>
             <button className="btn" onClick={handleContactHeader}>
@@ -194,7 +194,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
