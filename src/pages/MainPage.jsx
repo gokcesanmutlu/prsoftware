@@ -25,7 +25,7 @@ const MainPage = () => {
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
     { id: 4,
-      accordionTitle: "Can other info be added to an invoice?",
+      accordionTitle: "Can other info be added to invoice?",
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
@@ -65,8 +65,8 @@ const MainPage = () => {
           </div>
 
           <h1
-            className="text-center font-semibold"
-            style={{ fontSize: "60px" }}
+            className="text-center font-semibold text-[60px] f-c:text-[36px]"
+         
           >
             Beautiful analytics to grow smarter
           </h1>
@@ -89,7 +89,7 @@ const MainPage = () => {
               Contact Us
             </button>
           </div>
-          <div className="flex w-auto h-auto max-[375px]:hidden">
+          <div className="flex w-auto h-auto bg:hidden">
             <img className="w-full h-full object-cover" src="/bg-crop.jpg" />
           </div>
         </div>
@@ -115,7 +115,7 @@ const MainPage = () => {
           </div>
           <h2
             className="text-center font-semibold"
-            style={{ fontSize: "2rem" }}
+            style={{ fontSize: "1.5rem" }}
           >
             Analytics that feels like it’s from the future
           </h2>
@@ -125,7 +125,7 @@ const MainPage = () => {
             retain more users. Trusted by over 4,000 startups.
           </p>
         </div>
-        <div className="flex max-md:flex-col md:min-[10px] gap-4 mt-[64px]">
+        <div className="flex f-c:flex-col f-c:gap-10 gap-6  mt-[64px]">
           <div className="feature-item flex flex-col gap-1 items-center">
             <img className="w-[20px] h-[12px]:" src="mail.png" alt="" />
             <h3 style={{ fontSize: "20px", fontWeight: 500 }}>
@@ -163,7 +163,7 @@ const MainPage = () => {
       <section>
         <h2
           className="text-center font-semibold pb-[12px]"
-          style={{ fontSize: "2rem" }}
+          style={{ fontSize: "1.5rem" }}
         >
           Frequently asked questions
         </h2>
@@ -182,7 +182,7 @@ const MainPage = () => {
         <div className="flex flex-col gap-4 pt-[30px]">
           <h2
             className="text-center font-semibold"
-            style={{ fontSize: "2rem" }}
+            style={{ fontSize: "1.5rem" }}
           >
             Start your free trial
           </h2>
