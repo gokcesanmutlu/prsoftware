@@ -11,6 +11,9 @@ export default {
     screens: {
       'xs': { 'max': '375px' }, // Özel kırılma noktası tanımı
       'min-xs': { 'min': '375px' }, // Özel kırılma noktası tanımı
+      'menu-breakmax': { 'max': '960px' }, // Özel kırılma noktası tanımı
+      'menu-breakmin': { 'min': '960px' }, // Özel kırılma noktası tanımı
+      'padding-breakmax': { 'max': '600px' }, // Özel kırılma noktası tanımı
     },
     fontFamily: {
       'inter': ['Inter', 'sans-serif'],

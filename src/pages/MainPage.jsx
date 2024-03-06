@@ -2,36 +2,41 @@ import React, { useState } from "react";
 import Acordeon from "./../components/Acordeon";
 
 const MainPage = () => {
-  const [isModalOpen, setisModalOpen] = useState(false);
+ 
   const [currentStep, setCurrentStep] = useState(1);
 
   const accordionItems = [
     {
+      id: 1,
       accordionTitle: "Is there a free trial available?",
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
     {
+      id: 2,
       accordionTitle: "Can I change my plan later?",
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
     {
+      id: 3,
       accordionTitle: "What is your cancellation policy?",
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
-    {
+    { id: 4,
       accordionTitle: "Can other info be added to an invoice?",
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
     {
+      id: 5,
       accordionTitle: "How does billing work?",
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
     {
+      id: 6,
       accordionTitle: "How do I change my account email?",
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
@@ -166,8 +171,8 @@ const MainPage = () => {
           Everything you need to know about the product and billing.
         </p>
         <div className="flex flex-col gap-6 max-w-[800px] m-auto relative">
-          {accordionItems.map((i) => (
-            <Acordeon i={i} />
+          {accordionItems.map((i, key) => (
+            <Acordeon i={i} key={i.id} />
           ))}
         </div>
       </section>
