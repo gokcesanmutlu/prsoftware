@@ -46,7 +46,7 @@ const Header = () => {
 
       {/* FOR SCREEN THAT <960PX , TOGGLE MENU*/}
       {isModalOpen ? (
-        <div className="py-6 w-[375px] flex flex-col gap-1 menu-breakmin:hidden absolute top-[72px] bg-[#fff] z-[80px] right-0">
+        <div className="py-6 w-[375px] flex flex-col gap-1 menu-breakmin:hidden fixed top-[72px] bg-[#fff] z-[80px] right-0">
           <Link to="/" className="py-2 px-4 font-medium">
             Home
           </Link>
@@ -63,7 +63,7 @@ const Header = () => {
 
           {/* KÜÇÜK EKRANDA RESOURCES menüsünün açıldığı durum */}
           {isResourcesOpen ? (
-            <div className="out px-2 w-full h-auto menu-breakmin:hidden  ">
+            <div className="out px-2 w-full h-auto menu-breakmin:hidden   ">
               <div
                 className={`flex flex-col gap-8 m-auto items-center w-full h-[auto]`}
               >
@@ -136,61 +136,63 @@ const Header = () => {
 
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
-        <div className="out w-full h-auto menu-breakmax:hidden absolute bg-[#fff] z-[80px] right-0 ">
-          <div
-            className={`flex gap-12 m-auto items-center max-w-[1216px] h-[156px]`}
-          >
-            <div className="flex gap-2">
-              <div className="left">
-                <img src="/featuredicon3.png" alt="" />
+  
+          <div className="out w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80px] top-[72px] right-0 ">
+            <div
+              className={`flex gap-12 m-auto items-center max-w-[1216px] h-[156px]`}
+            >
+              <div className="flex gap-2">
+                <div className="left">
+                  <img src="/featuredicon3.png" alt="" />
+                </div>
+                <div className="right">
+                  <h3 className="font-medium">About us</h3>
+                  <p className="text-sm">
+                    Learn about our story and our mission statement.
+                  </p>
+                </div>
               </div>
-              <div className="right">
-                <h3 className="font-medium">About us</h3>
-                <p className="text-sm">
-                  Learn about our story and our mission statement.
-                </p>
+              <div className="flex gap-2">
+                <div className="left">
+                  <img src="/featuredicon2.png" alt="" />
+                </div>
+                <div className="right">
+                  <h3 className="font-medium">Press</h3>
+                  <p className="text-sm">
+                    News and writings, press releases, and resources
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className="left">
+                  <img src="/featuredicon1.png" alt="" />
+                </div>
+                <div className="right">
+                  <h3 className="font-medium">Careers</h3>
+                  <p className="text-sm">
+                    We’re always looking for talented people. Join us!
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className="left">
+                  <img src="/featuredicon4.png" alt="" />
+                </div>
+                <div className="right">
+                  <h3 className="font-medium">Legal</h3>
+                  <p className="text-sm">
+                    All the boring stuff that we Dan from legal made us add.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="flex gap-2">
-              <div className="left">
-                <img src="/featuredicon2.png" alt="" />
-              </div>
-              <div className="right">
-                <h3 className="font-medium">Press</h3>
-                <p className="text-sm">
-                  News and writings, press releases, and resources
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <div className="left">
-                <img src="/featuredicon1.png" alt="" />
-              </div>
-              <div className="right">
-                <h3 className="font-medium">Careers</h3>
-                <p className="text-sm">
-                  We’re always looking for talented people. Join us!
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2">
-              <div className="left">
-                <img src="/featuredicon4.png" alt="" />
-              </div>
-              <div className="right">
-                <h3 className="font-medium">Legal</h3>
-                <p className="text-sm">
-                  All the boring stuff that we Dan from legal made us add.
-                </p>
-              </div>
+            <div className="py-[20px] bg-[#F9F5FF] w-full h-auto flex items-center justify-center ">
+              <a className=" text-[#7F56D9]" href="/">
+                Looking for a new career? Get in touch
+              </a>
             </div>
           </div>
-          <div className="py-[20px] bg-[#F9F5FF] w-full h-auto flex items-center justify-center ">
-            <a className=" text-[#7F56D9]" href="/">
-              Looking for a new career? Get in touch
-            </a>
-          </div>
-        </div>
+      
       ) : (
         ""
       )}
