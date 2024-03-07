@@ -5,11 +5,11 @@ const Footer = () => {
   return (
     <footer className="max-w-[1440px] h-[128px] px-[80px] py-[48px] top-[146px] left-[3102px] flex justify-between items-center xs:flex-col xs:gap-10 xs:items-start  ">
       <div className="min-w-[128px] min-h-[26.32px]">
-        <img src="logo.png"></img>
+        <img src="/logo.png"></img>
       </div>
 
       <ul className="flex flex-wrap justify-start gap-[2rem] text-[#344054] font-medium pr-10">
-      <li>
+        <li>
           <Link to="/home">Home</Link>
         </li>
         <li>

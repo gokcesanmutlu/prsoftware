@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     colors: {
-      "purpleo": '#9747FF',
+      "purpleo": '#7F56D9',
     },
     screens: {
       'xs': { 'max': '375px' }, // Özel kırılma noktası tanımı

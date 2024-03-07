@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Acordeon from "./../components/Acordeon";
+import PrivacyModal from "../components/PrivacyModal";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
- 
   const [currentStep, setCurrentStep] = useState(1);
 
   const accordionItems = [
@@ -24,7 +25,8 @@ const MainPage = () => {
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
-    { id: 4,
+    {
+      id: 4,
       accordionTitle: "Can other info be added to invoice?",
       accordionContent:
         "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
@@ -43,15 +45,9 @@ const MainPage = () => {
     },
   ];
 
-  const handleContactHeader = () => {
-    console.log("handleContactHeader çalıştı");
-    setisModalOpen(true);
-    setCurrentStep(1);
-  };
 
   return (
-    <div className="">
-      {/* <Header handleContactHeader={handleContactHeader} /> */}
+    <div>
 
       {/* SECTION BANNER */}
       <section className="w-full h-auto">
@@ -64,10 +60,7 @@ const MainPage = () => {
             </button>
           </div>
 
-          <h1
-            className="text-center font-semibold text-[60px] f-c:text-[36px]"
-         
-          >
+          <h1 className="text-center font-semibold text-[60px] f-c:text-[36px]">
             Beautiful analytics to grow smarter
           </h1>
           <p className="text-center mt-[24px]">
@@ -82,12 +75,14 @@ const MainPage = () => {
               <img src="Icon.svg" alt="" />
               <span>Demo</span>
             </button>
-            <button
-              className="btn xs:w-full min-w-[143px] h-[60px]"
-              onClick={handleContactHeader}
-            >
-              Contact Us
-            </button>
+            <Link to={"/contact/step1"}>
+              <button
+                className="btn xs:w-full min-w-[143px] h-[60px]"
+              
+              >
+                Contact Us
+              </button>
+            </Link>
           </div>
           <div className="flex w-auto h-auto bg:hidden">
             <img className="w-full h-full object-cover" src="/bg-crop.jpg" />
@@ -137,7 +132,7 @@ const MainPage = () => {
             </p>
           </div>
           <div className="feature-item flex flex-col gap-1 items-center">
-            <img src="zap.svg" alt="" />
+            <img src="zap.png" alt="" />
             <h3 style={{ fontSize: "20px", fontWeight: 500 }}>
               Deliver instant answers
             </h3>
@@ -147,7 +142,7 @@ const MainPage = () => {
             </p>
           </div>
           <div className="feature-item flex flex-col gap-1 items-center">
-            <img src="bar-chart-2.svg" alt="" />
+            <img src="bar-chart-2.png" alt="" />
             <h3 style={{ fontSize: "20px", fontWeight: 500 }}>
               Manage your team with reports
             </h3>
@@ -193,9 +188,11 @@ const MainPage = () => {
             <button className="xs:w-full min-w-[143px] h-[60px] flex gap-2 items-center justify-center bg-white text-lg font-semibold gri-border px-2 py-1 rounded-[8px]">
               Learn More
             </button>
-            <button className="btn" onClick={handleContactHeader}>
-              Contact Us
-            </button>
+            <Link to={"/contact/step1"}>
+              <button className="btn xs:w-screen">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
       </section>

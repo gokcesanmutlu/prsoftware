@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 hr {
   color: #eaecf0;
 }
@@ -28,14 +33,8 @@ p {
   border-radius: 0.5rem;
 }
 
-.gri-border{
-  border: solid 1px #D0D5DD;
- 
-}
-
-* {
-  margin: 0;
-  padding: 0;
+.gri-border {
+  border: solid 1px #d0d5dd;
 }
 
 .modal-button button {
@@ -69,6 +68,7 @@ section {
 .feature-item img {
   width: 20px;
 }
+
 .feature-item p {
   text-align: center;
 }
@@ -98,8 +98,8 @@ section {
 footer {
   width: 100vw;
 }
+
 @media (max-width: 920px) {
-  
   .container {
     background-image: none;
     height: 400px;
@@ -132,11 +132,8 @@ footer {
   }
 }
 
-
 @media (max-width: 700px) {
   section {
     padding: 15px 40px 15px 40px;
   }
 }
-
-
