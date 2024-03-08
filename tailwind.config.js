@@ -15,7 +15,8 @@ export default {
       'menu-breakmin': { 'min': '960px' }, // Özel kırılma noktası tanımı
       'padding-breakmax': { 'max': '600px' }, // Özel kırılma noktası tanımı
       "f-c": { "max": "768px" },
-      "bg": { "max": "1009px" }
+      "bg": { "max": "1009px" },
+      "footerbreak": { "max": "1117px" }
     },
     fontFamily: {
       'inter': ['Inter', 'sans-serif'],

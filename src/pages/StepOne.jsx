@@ -1,21 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const StepOne = () => {
+  const location = useLocation();
+  const currentStep = location.pathname.split("/").pop(); // Mevcut adımı alma
+  console.log(currentStep) //step1
   return (
     <div className="w-screen h-screen flex items-center justify-center mt-[-100px]">
       <div className="flex justify-center items-center flex-col gap-10">
         {/* STEP BUTTONS */}
         <div className="steps flex justify-center gap-1 rounded-[16px] bg-[#F9F5FF] py-1 px-[10px]">
-          <button className="py-[2px] px-[10px] bg-purpleo text-[#fff] rounded-[16px]">
+          <Link
+            to={"/contact/step1"}
+            className="py-[2px] px-[10px] bg-purpleo text-[#fff] rounded-[16px]"
+          >
             Step 1
-          </button>
-          <button className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]">
+          </Link>
+          <Link
+            to={"/contact/step2"}
+            className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]"
+          >
             Step 2
-          </button>
-          <button className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]">
+          </Link>
+          <Link className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]">
             Step 3
-          </button>
+          </Link>
         </div>
 
         {/* ARA FORM */}
