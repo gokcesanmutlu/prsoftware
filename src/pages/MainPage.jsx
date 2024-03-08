@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Acordeon from "./../components/Acordeon";
-import PrivacyModal from "../components/PrivacyModal";
 import { Link } from "react-router-dom";
 
 const MainPage = () => {
-  const [currentStep, setCurrentStep] = useState(1);
 
   const accordionItems = [
     {
@@ -183,8 +181,11 @@ const MainPage = () => {
               Learn More
             </button>
 
-            <Link to={"/contact/step1"} className="flex items-center justify-center text-[#fff] bg-purpleo py-[10px] px-[18px] rounded-lg h-[44px] min-w-[143px] xs:w-full">
-              <button >Contact Us</button>
+            <Link
+              to={"/contact/step1"}
+              className="flex items-center justify-center text-[#fff] bg-purpleo py-[10px] px-[18px] rounded-lg h-[44px] min-w-[143px] xs:w-full"
+            >
+              <button>Contact Us</button>
             </Link>
           </div>
         </div>

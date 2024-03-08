@@ -9,7 +9,7 @@ const StepSuccess = () => {
         <div className="steps flex justify-center gap-1 rounded-[16px] bg-[#F9F5FF] py-1 px-[10px]">
           <Link
             to={"/contact/step1"}
-            className="py-[2px] px-[10px] bg-purpleo text-[#fff] rounded-[16px]"
+            className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]"
           >
             Step 1
           </Link>
@@ -19,7 +19,7 @@ const StepSuccess = () => {
           >
             Step 2
           </Link>
-          <button className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]">
+          <button className="py-[2px] px-[10px]  bg-purpleo text-[#fff] rounded-[16px]">
             Step 3
           </button>
         </div>

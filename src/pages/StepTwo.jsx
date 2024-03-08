@@ -16,22 +16,22 @@ const validationSchema = Yup.object().shape({
 });
 
 const StepTwo = () => {
-  const [isModalOpen, setIsModalOpen] = useState();
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   return (
     <div className="w-screen h-screen flex items-center justify-center mt-[-100px]">
       <div className="flex justify-center items-center flex-col gap-10">
         {/* STEP BUTTONS */}
         <div className="steps flex justify-center gap-1 rounded-[16px] bg-[#F9F5FF] py-1 px-[10px]">
-        <Link
+          <Link
             to={"/contact/step1"}
-            className="py-[2px] px-[10px] bg-purpleo text-[#fff] rounded-[16px]"
+            className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]"
           >
             Step 1
           </Link>
           <Link
             to={"/contact/step2"}
-            className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]"
+            className="py-[2px] px-[10px] bg-purpleo text-[#fff] rounded-[16px]"
           >
             Step 2
           </Link>
@@ -161,7 +161,11 @@ const StepTwo = () => {
             <Link to={"/modal"}>
               <u> privacy policy</u>
             </Link>
-            {isModalOpen ? <PrivacyModal /> : " "}
+            {isPrivacyOpen ? (
+              <PrivacyModal setIsPrivacyOpen={setIsPrivacyOpen} />
+            ) : (
+              " "
+            )}
           </p>
         </div>
 

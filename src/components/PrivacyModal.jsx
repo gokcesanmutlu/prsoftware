@@ -1,16 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const PrivacyModal = () => {
+const PrivacyModal = ({ setIsPrivacyOpen }) => {
+  const closeModal = () => {
+    setIsPrivacyOpen(false); // Modal'ı kapatmak için setIsModalOpen fonksiyonunu çağırıyoruz
+  };
+
   return (
-    <div className="w-screen h-screen bg-[#fff] p-6 ">
+    <div className="w-screen h-screen bg-[#fff] p-[80px]">
       <div>
-        <h3 className="font-medium ">Privacy Policy</h3>
-        <p className=" text-sm">
+        <h3 className="font-medium  text-md ">PRIVACY POLICY</h3>
+        <br />
+        <p className=" text-md">
           Your privacy is important to us. We respect your privacy regarding any
           information we may collect from you across our website
         </p>
         <div className="px-6 py-4">
-          <p className=" text-sm">
+          <p className=" text-md">
             Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam
             suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum
             quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris
@@ -24,9 +30,11 @@ const PrivacyModal = () => {
             imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.{" "}
           </p>
           <br />
-          <h3 className="font-medium">What information do we collect?</h3>
+          <h3 className="font-medium text-md">
+            WHAT INFORMATION DO WE COLLECT?
+          </h3>
           <br />
-          <p className=" text-sm">
+          <p className=" text-md">
             Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla
             odio nisl vitae. In aliquet pellentesque aenean hac vestibulum
             turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada
@@ -45,12 +53,12 @@ const PrivacyModal = () => {
       </div>
 
       <div className="buttons flex justify-center gap-2 rounded-[8px] pb-2">
-        <button className="flex flex-1 h-[30px] py-[2px] items-center justify-center bg-white text-[#344054] font-semibold gri-border  rounded-[8px]">
+        <button onClick={closeModal} className="flex flex-1 h-[30px] py-[2px] items-center justify-center bg-white text-[#344054] font-semibold gri-border  rounded-[8px]">
           Cancel
         </button>
-        <button className="btn flex h-[30px] flex-1 items-center justify-center ">
+        <Link to={"/contact/step1"} className="btn flex h-[30px] flex-1 items-center justify-center ">
           Contact Us
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const Acordeon = ({ i }) => {
         </div>
         <div className="right">
           <button className="absolute right-0" onClick={() => setIsQuestionOpen(!isQuestionOpen)}>
-            <img src="minus.png" />
+            <img src={isQuestionOpen ? "/minus.png" : "/plus.png"}/>
           </button>
         </div>
       </div>
