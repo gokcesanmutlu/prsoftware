@@ -88,7 +88,7 @@ const StepTwo = () => {
                   <div className="flex gap-1">
                     <select
                       defaultValue={"+90"}
-                      className={`border border-solid border-[#D0D5DD] w-[70px] mt-1 p-2 rounded-[8px] shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 `}
+                      className={`border border-solid border-[#D0D5DD] w-[100px] mt-1 p-2 rounded-[8px] shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 `}
                       type="text"
                     >
                       <option value="1">+90</option>

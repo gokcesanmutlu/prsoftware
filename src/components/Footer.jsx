@@ -2,16 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  
   return (
-    <footer className="container-xl h-[128px] px-[80px] py-[48px] top-[80px] left-[3102px] flex justify-between items-center footerbreak:flex-col xs:gap-10 xs:items-start  ">
-      <div className="min-w-[128px] min-h-[26.32px]">
-        <img src="/logo.png"></img>
+    <footer className="fixed bottom-0 left-0 bg-[#fff] w-full bg-white py-6 px-[75px] flex justify-between items-center">
+      <div>
+        <Link to={"/"}>
+          <img src="/logo.png" alt="Logo" />
+        </Link>
       </div>
 
-      <ul className="flex flex-wrap justify-start gap-[2rem] text-[#344054] font-medium pr-10">
+      <ul className="flex gap-8 text-gray-600 font-medium">
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/about">About Us</Link>
@@ -30,7 +31,7 @@ const Footer = () => {
         </li>
       </ul>
 
-      <p className="text-[#667085]">© 2023 PR Yazılım. All rights reserved</p>
+      <p className="text-gray-600">© 2023 PR Yazılım. All rights reserved</p>
     </footer>
   );
 };

@@ -112,6 +112,7 @@ const MainPage = () => {
             retain more users. Trusted by over 4,000 startups.
           </p>
         </div>
+
         <div className="flex f-c:flex-col f-c:gap-10 gap-6  mt-[64px]">
           <div className="feature-item flex flex-col gap-1 items-center">
             <img className="w-[20px] h-[12px]:" src="mail.png" alt="" />
@@ -165,8 +166,8 @@ const MainPage = () => {
       </section>
 
       {/* SECTION CTO */}
-      <section className="bg-[#F9F5FF]">
-        <div className="flex flex-col gap-4 pt-[30px]">
+      <section className="bg-[#F9F5FF] ">
+        <div className="flex flex-col gap-4 pb-[100px]">
           <h2
             className="text-center font-semibold"
             style={{ fontSize: "1.5rem" }}
@@ -183,7 +184,7 @@ const MainPage = () => {
 
             <Link
               to={"/contact/step1"}
-              className="flex items-center justify-center text-[#fff] bg-purpleo py-[10px] px-[18px] rounded-lg h-[44px] min-w-[143px] xs:w-full"
+              className="flex items-center justify-center text-[#fff] bg-purpleo py-[10px] px-[18px] rounded-lg h-[44px] min-w-[143px] xs:w-full "
             >
               <button>Contact Us</button>
             </Link>

@@ -1,10 +1,10 @@
 import React from "react";
 
-const Help = () => {
+const PrivacyPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-semibold text-center mb-8">Help</h1>
+        <h1 className="text-3xl font-semibold text-center mb-8">Privacy</h1>
         <div className="flex flex-col md:flex-row items-center justify-center md:gap-8">
           <div className="md:w-1/2">
             <p className="text-lg mb-4">
@@ -37,4 +37,4 @@ const Help = () => {
   );
 };
 
-export default Help;
+export default PrivacyPage;
