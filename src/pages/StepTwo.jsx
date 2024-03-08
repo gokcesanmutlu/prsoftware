@@ -152,23 +152,26 @@ const StepTwo = () => {
           <input type="checkbox" />
           <p className="text-[#667085] text-sm font-inter">
             You agree to our friendly{" "}
-            <button onClick={() => setIsModalOpen(!isModalOpen)}>
+            <Link to={"/modal"}>
               <u> privacy policy</u>
-            </button>
+            </Link>
             {isModalOpen ? <PrivacyModal /> : " "}
           </p>
         </div>
 
         {/* Buttons */}
-        <div className="h-[44px] buttons flex gap-4 rounded-[8px] mb-5 ">
-          <button className="flex-1 xs:hidden gri-border h-full flex items-center  bg-white text-lg font-semibold px-2 py-1 rounded-[8px]">
-            <img src="Icon.svg" alt="" />
-            <span className="text-[#344054]">Back</span>
-          </button>
-
-          <button className=" flex-1 flex items-center btn py-[6px] h-full">
-            Complete
-          </button>
+        <div className="h-[44px] gap-4 rounded-[8px] w-full flex">
+          <Link className="flex flex-1" to={"/contact/step1"}>
+            <button className="w-full flex items-center justify-center xs:hidden gri-border h-full bg-white text-lg font-semibold px-2 py-1 rounded-[8px]">
+              <img src="/arrowleft.png" alt="" />
+              <span className="text-[#344054]">Back</span>
+            </button>
+          </Link>
+          <Link className="flex flex-1" to={"/contact/step3"}>
+            <button className="w-full flex justify-center items-center btn py-[6px] h-full xs:w-full">
+              Complete
+            </button>{" "}
+          </Link>
         </div>
       </div>
     </div>

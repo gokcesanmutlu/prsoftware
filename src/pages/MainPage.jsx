@@ -45,10 +45,8 @@ const MainPage = () => {
     },
   ];
 
-
   return (
     <div>
-
       {/* SECTION BANNER */}
       <section className="w-full h-auto">
         <div className="flex flex-col gap-3">
@@ -56,7 +54,7 @@ const MainPage = () => {
             <button>New feature</button>
             <button className="home-right flex  justify-center items-center gap-1">
               <span>Check out the team dashboard</span>
-              <img src="arrow-right.png" alt="" />
+              <img src="arrowright.png" alt="" />
             </button>
           </div>
 
@@ -70,20 +68,16 @@ const MainPage = () => {
             and retain more users. Trusted by over 4,000 startups.
           </p>
 
-          <div className="buttons flex justify-center gap-4 rounded-[8px] mt-[48px] mb-5 ">
-            <button className="gri-border xs:w-full min-w-[143px] h-[60px] flex gap-2 items-center justify-center bg-white text-lg font-semibold px-2 py-1 rounded-[8px]">
-              <img src="Icon.svg" alt="" />
+          <div className="w-full buttons flex justify-center gap-4 rounded-[8px] mt-[48px] mb-5 ">
+            <button className="gri-border xs:w-full min-w-[143px] h-[44x] flex gap-2 items-center justify-center bg-white text-lg font-semibold py-[8px] px-[16px] rounded-[8px]">
+              <img src="play-circle.png" alt="" />
               <span>Demo</span>
             </button>
-            <Link to={"/contact/step1"}>
-              <button
-                className="btn xs:w-full min-w-[143px] h-[60px]"
-              
-              >
-                Contact Us
-              </button>
-            </Link>
+            <button className="text-[#fff] bg-purpleo py-[10px] px-[18px] rounded-lg h-[44px] xs:w-full min-w-[143px]">
+              <Link to={"/contact/step1"}>Contact Us</Link>
+            </button>
           </div>
+
           <div className="flex w-auto h-auto bg:hidden">
             <img className="w-full h-full object-cover" src="/bg-crop.jpg" />
           </div>
@@ -165,7 +159,7 @@ const MainPage = () => {
         <p className="text-center mb-10">
           Everything you need to know about the product and billing.
         </p>
-        <div className="flex flex-col gap-6 max-w-[800px] m-auto relative">
+        <div className="flex flex-col gap-6 max-w-[800px] m-auto relative ">
           {accordionItems.map((i, key) => (
             <Acordeon i={i} key={i.id} />
           ))}
@@ -185,13 +179,12 @@ const MainPage = () => {
             Join over 4,000+ startups already growing with us.
           </p>
           <div className="buttons flex justify-center gap-2 rounded-[8px] pb-2">
-            <button className="xs:w-full min-w-[143px] h-[60px] flex gap-2 items-center justify-center bg-white text-lg font-semibold gri-border px-2 py-1 rounded-[8px]">
+            <button className="xs:w-full min-w-[143px] h-[44px] flex gap-2 items-center justify-center bg-white text-lg font-semibold gri-border  py-[10px] px-[18px]  rounded-[8px]">
               Learn More
             </button>
-            <Link to={"/contact/step1"}>
-              <button className="btn xs:w-screen">
-                Contact Us
-              </button>
+
+            <Link to={"/contact/step1"} className="flex items-center justify-center text-[#fff] bg-purpleo py-[10px] px-[18px] rounded-lg h-[44px] min-w-[143px] xs:w-full">
+              <button >Contact Us</button>
             </Link>
           </div>
         </div>

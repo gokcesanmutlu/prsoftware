@@ -3,6 +3,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Header bileşenindeki CSS */
+
+.header-container {
+  position: relative;
+  z-index: 100; /* Acordeon bileşeninden daha yüksek bir değer kullanın */
+}
+
+.modal-container {
+  position: fixed;
+  top: 53px;
+  right: 0;
+  background-color: #fff;
+  z-index: 90; /* Acordeon bileşeninden daha düşük bir değer kullanın */
+}
+
+
+.backlayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Siyah renk ve %50 opaklık */
+ 
+}
+
 * {
   margin: 0;
   padding: 0;
