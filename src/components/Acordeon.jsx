@@ -5,7 +5,7 @@ const Acordeon = ({ i }) => {
 
   return (
     <>
-      <div className="flex relative  ">
+      <div className="flex justify-between ">
         <div>
           <p className="font-medium text-[#101828]">{i.accordionTitle}</p>
           <div className={isQuestionOpen ? "" : "hidden"}>
@@ -13,11 +13,11 @@ const Acordeon = ({ i }) => {
           </div>
         </div>
         <div>
-          <button
-            className="absolute right-0"
+          <button className="w-6" 
+           
             onClick={() => setIsQuestionOpen(!isQuestionOpen)}
           >
-            <img src={isQuestionOpen ? "/minus.png" : "/plus.png"} />
+            <img className="w-full" src={isQuestionOpen ? "/minus.png" : "/plus.png"} />
           </button>
         </div>
       </div>

@@ -45,11 +45,13 @@ const MainPage = () => {
   return (
     <div>
       {/* SECTION BANNER */}
-      <section className="w-full h-auto">
-        <div className="flex flex-col gap-3">
-          <div className="text-[#7f56d9] bg-[#F9F5FF] text-[14px] flex justify-center items-center gap-4 py-1">
-            <button>New feature</button>
-            <button className="home-right flex  justify-center items-center gap-1">
+      <section>
+        <div className="flex flex-col items-center gap-8 ">
+          <div className="text-[#7F56D9] xs:text-xs bg-[#F9F5FF] font-medium rounded-2xl w-fit text-[14px] flex justify-center items-center gap-3 xs:gap-1 py-1 p-[10px]">
+            <button className="bg-[#fff] rounded-2xl py-[2px] px-[10px]">
+              New feature
+            </button>
+            <button className=" flex justify-center items-center gap-1 py-[]">
               <span>Check out the team dashboard</span>
               <img src="arrowright.png" alt="" />
             </button>
@@ -58,14 +60,14 @@ const MainPage = () => {
           <h1 className="text-center font-semibold text-[60px] f-c:text-[36px]">
             Beautiful analytics to grow smarter
           </h1>
-          <p className="text-center mt-[24px]">
+          <p className="text-center mt-[24px] leading-7">
             Powerful, self-serve product and growth analytics to help you
             convert, engage,
             <br />
             and retain more users. Trusted by over 4,000 startups.
           </p>
 
-          <div className="w-full buttons flex justify-center gap-4 rounded-[8px] mt-[48px] mb-5 ">
+          <div className="w-full buttons flex justify-center gap-4 rounded-[8px] mt-[48px]  ">
             <button className="gri-border xs:w-full min-w-[143px] h-[44x] flex gap-2 items-center justify-center bg-white text-lg font-semibold py-[8px] px-[16px] rounded-[8px]">
               <img src="play-circle.png" alt="" />
               <span>Demo</span>
@@ -75,29 +77,34 @@ const MainPage = () => {
             </button>
           </div>
 
-          <div className="flex w-auto h-auto bg:hidden">
+          <div className="flex w-fit h-fit bg:hidden">
             <img className="w-full h-full object-cover" src="/bg-crop.jpg" />
           </div>
         </div>
       </section>
 
       {/* SECTION SOCIAL */}
-      <section className="flex flex-col gap-3 mt-[32px] ">
-        <p className="text-center">Join 4,000+ companies already growing</p>
-        <div className="flex gap-3 justify-center">
-          <img style={{ width: "180px", height: "39px" }} src="26.png" />
-          <img style={{ width: "180px", height: "39px" }} src="27.png" />
-          <img style={{ width: "180px", height: "39px" }} src="28.png" />
-          <img style={{ width: "180px", height: "39px" }} src="29.png" />
-          <img style={{ width: "180px", height: "39px" }} src="30.png" />
+      <section className="flex flex-col gap-6 leading-6  ">
+        <span className="text-center font-medium font-sm text-[#667085] xs:mb-2">
+          Join 4,000+ companies already growing
+        </span>
+
+        <div className="flex flex-wrap gap-8 justify-center">
+          <img style={{ width: "169px", height: "48px" }} src="26.png" />
+          <img style={{ width: "169px", height: "48px" }} src="27.png" />
+          <img style={{ width: "169px", height: "48px" }} src="28.png" />
+          <img style={{ width: "169px", height: "48px" }} src="29.png" />
+          <img style={{ width: "150px", height: "42px" }} src="30.png" />
         </div>
       </section>
 
       {/* SECTION FEATURES */}
-      <section>
-        <div className=" flex flex-col gap-4">
+      <section className="flex flex-col gap-[64px]">
+        <div className=" flex flex-col gap-6">
           <div className="text-[#7f56d9] text-[14px] text-center">
-            <span className="font-semibold text-[16px]">Features</span>
+            <span className="font-semibold text-[16px] leading-6 ">
+              Features
+            </span>
           </div>
           <h2
             className="text-center font-semibold"
@@ -112,7 +119,7 @@ const MainPage = () => {
           </p>
         </div>
 
-        <div className="flex f-c:flex-col f-c:gap-10 gap-6  mt-[64px]">
+        <div className="flex f-c:flex-col f-c:gap-10 gap-8  ">
           <div className="flex flex-col gap-1 items-center">
             <img className="w-[20px]" src="mail.png" alt="" />
             <h3 style={{ fontSize: "20px", fontWeight: 500 }}>
@@ -147,17 +154,20 @@ const MainPage = () => {
       </section>
 
       {/* SECTION FAQ */}
-      <section>
-        <h2
-          className="text-center font-semibold pb-[12px]"
-          style={{ fontSize: "1.5rem" }}
-        >
-          Frequently asked questions
-        </h2>
-        <p className="text-center mb-10">
-          Everything you need to know about the product and billing.
-        </p>
-        <div className="flex flex-col gap-6 max-w-[800px] m-auto relative ">
+      <section className="flex flex-col gap-[40px]   justify-between">
+        <div>
+          <h2
+            className="text-center font-semibold pb-[12px]"
+            style={{ fontSize: "1.5rem" }}
+          >
+            Frequently asked questions
+          </h2>
+          <p className="text-center mb-10">
+            Everything you need to know about the product and billing.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-6 container m-auto  h-fit">
           {accordionItems.map((i, key) => (
             <Acordeon i={i} key={i.id} />
           ))}
@@ -165,28 +175,31 @@ const MainPage = () => {
       </section>
 
       {/* SECTION CTO */}
-      <section className="bg-[#F9F5FF] ">
-        <div className="flex flex-col gap-4 pb-[100px]">
-          <h2
-            className="text-center font-semibold"
-            style={{ fontSize: "1.5rem" }}
-          >
-            Start your free trial
-          </h2>
-          <p className="text-center">
-            Join over 4,000+ startups already growing with us.
-          </p>
-          <div className="buttons flex justify-center gap-2 rounded-[8px] pb-2">
-            <button className="xs:w-full min-w-[143px] h-[44px] flex gap-2 items-center justify-center bg-white text-lg font-semibold gri-border  py-[10px] px-[18px]  rounded-[8px]">
-              Learn More
-            </button>
+      <section className="bg-[#F9F5FF]   ">
+        <div className="flex flex-col  gap-[40px]">
+          <div className="flex flex-col gap-3">
+            <h2
+              className="text-center font-semibold"
+              style={{ fontSize: "1.5rem" }}
+            >
+              Start your free trial
+            </h2>
+            <p className="text-center">
+              Join over 4,000+ startups already growing with us.
+            </p>
+          </div>
 
+          <div className="buttons flex justify-center gap-2 rounded-[8px] pb-2">
             <Link
               to={"/contact/step1"}
-              className="flex items-center justify-center text-[#fff] bg-purpleo py-[10px] px-[18px] rounded-lg h-[44px] min-w-[143px] xs:w-full "
+              className="flex items-center justify-center text-[#fff] bg-purpleo py-[12px] px-[20px] rounded-lg h-[44px] min-w-[143px] xs:w-full "
             >
               <button>Contact Us</button>
             </Link>
+
+            <button className="xs:w-full min-w-[143px] h-[44px] flex gap-2 items-center justify-center bg-white text-lg text-[#344054] font-semibold gri-border py-[12px] px-[20px] rounded-[8px]">
+              Learn More
+            </button>
           </div>
         </div>
       </section>

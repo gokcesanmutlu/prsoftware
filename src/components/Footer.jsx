@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between items-center w-full fixed bottom-0 left-0 bg-[#fff] py-6 px-[75px]">
+    <footer className="xs:h-[328px] flex justify-between w-full  bg-[#fff] py-[48px] px-[80px]">
       <Link to={"/"}>
         <img src="/logo.png" alt="Logo" />
       </Link>
 
-      <ul className="flex gap-8 text-gray-600 font-medium">
+      <ul className="flex flex-wrap px-12 gap-6 text-[#344054] text-xs font-medium">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -29,7 +29,9 @@ const Footer = () => {
         </li>
       </ul>
 
-      <p className="text-gray-600">© 2023 PR Yazılım. All rights reserved</p>
+      <p className="text-gray-600 font-medium text-xs">
+        © 2023 PR Yazılım. All rights reserved
+      </p>
     </footer>
   );
 };

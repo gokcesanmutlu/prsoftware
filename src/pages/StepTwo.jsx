@@ -17,6 +17,15 @@ const validationSchema = Yup.object().shape({
 
 const StepTwo = () => {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+  const [isTextareaFocused, setTextareaFocused] = useState(false);
+
+  const handleTextareaFocus = () => {
+    setTextareaFocused(true);
+  };
+
+  const handleTextareaBlur = () => {
+    setTextareaFocused(false);
+  };
 
   return (
     <div className="w-screen h-screen flex items-center justify-center mt-[-100px]">
@@ -139,8 +148,12 @@ const StepTwo = () => {
                     name="message"
                     as="textarea"
                     rows="4"
-                    className={`border border-solid border-[#D0D5DD] mt-1 p-2 rounded-[8px] shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 block w-full`}
+                    className={`border border-solid border-[#D0D5DD] mt-1 p-2 rounded-[8px] shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 block w-full ${
+                      isTextareaFocused ? "border-[#D6BBFB]" : ""
+                    }`}
                     placeholder="Enter your message (max 400 characters)"
+                    onFocus={handleTextareaFocus}
+                    onBlur={handleTextareaBlur}
                   />
                   <ErrorMessage
                     name="message"

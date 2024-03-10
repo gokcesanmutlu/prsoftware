@@ -33,25 +33,38 @@ const StepOne = () => {
 
         {/* ARA FORM */}
         <div className="araform w-[406px]">
-          <p className="font-medium  text-[#344054]">
+          <p className="font-medium text-[#344054] mb-5">
             What kind of plan is most suitable for you?
           </p>
           {/* şıklar */}
           <ul className="flex flex-col gap-3">
             {/* 1. şık */}
             <li
-              className="flex  gap-3 p-2 rounded-[8px]  border-[1px] gri-border"
+              className={`flex  gap-3 p-2 rounded-[8px] border-[1px] gri-border  ${
+                selectedOption === 0 ? "purple-border" : "gri-border"
+              } ${
+                selectedOption === 0 ? "bg-[#F9F5FF]" : ""
+              }`}
               onClick={() => handleOptionClick(0)}
-              style={{
-                backgroundColor: selectedOption === 0 ? "pink" : "transparent",
-              }}
             >
               <div className="left w-6 h-6">
-                <img className="w-full" src="/frame1.svg" alt="" />
+                <img
+                  className="w-full"
+                  src={`${
+                    selectedOption === 0 ? "/person.png" : "/frame1.svg"
+                  } `}
+                  alt=""
+                />
               </div>
 
               <div className="right ">
-                <p className="font-medium text-[#344054]">Individual</p>
+                <p
+                  className={`font-medium ${
+                    selectedOption === 0 ? "text-[#7F56D9]" : "text-[#344054]"
+                  }`}
+                >
+                  Individual
+                </p>
                 <p className="text-base">
                   For individual designer and developer.
                 </p>
@@ -60,18 +73,29 @@ const StepOne = () => {
 
             {/* 2. şık */}
             <li
-              className="flex gap-3 p-2 rounded-[8px] border-[1px] gri-border"
+              className={`flex gap-3 p-2 rounded-[8px] border-[1px] gri-border  ${
+                selectedOption === 1 ? "purple-border" : "gri-border"
+              } ${
+                selectedOption === 1 ? "bg-[#F9F5FF]" : ""
+              }`}
               onClick={() => handleOptionClick(1)}
-              style={{
-                backgroundColor: selectedOption === 1 ? "pink" : "transparent",
-              }}
             >
               <div className="left w-6 h-6">
-                <img className="w-full" src="/frame.svg" alt="" />
+                <img
+                  className="w-full"
+                  src={`${selectedOption === 1 ? "/three.png" : "/frame.svg"} `}
+                  alt=""
+                />
               </div>
 
               <div className="right">
-                <p className="font-medium text-[#344054]">Team</p>
+                <p
+                  className={`font-medium ${
+                    selectedOption === 1 ? "text-[#7F56D9]" : "text-[#344054]"
+                  }`}
+                >
+                  Team
+                </p>
                 <p className="text-base">
                   For small team of designers and developers.
                 </p>
@@ -80,18 +104,31 @@ const StepOne = () => {
 
             {/* 3. şık */}
             <li
-              className=" flex gap-3 p-2 rounded-[8px]  gri-border"
+              className={`flex gap-3 p-2 rounded-[8px] ${
+                selectedOption === 2 ? "purple-border" : "gri-border"
+              } ${
+                selectedOption === 2 ? "bg-[#F9F5FF]" : ""
+              }`}
               onClick={() => handleOptionClick(2)}
-              style={{
-                backgroundColor: selectedOption === 2 ? "pink" : "transparent",
-              }}
             >
               <div className="left w-6 h-6">
-                <img className="w-full" src="/frame3.svg" alt="" />
+                <img
+                  className="w-full "
+                  src={`${
+                    selectedOption === 2 ? "/building.png" : "/frame3.svg"
+                  } `}
+                  alt=""
+                />
               </div>
 
               <div className="right ">
-                <p className="font-medium text-[#344054]">Corporate</p>
+                <p
+                  className={`font-medium ${
+                    selectedOption === 2 ? "text-[#7F56D9]" : "text-[#344054]"
+                  }`}
+                >
+                  Corporate
+                </p>
                 <p className="text-base">
                   For larger design and development teams.
                 </p>

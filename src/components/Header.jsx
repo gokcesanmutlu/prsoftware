@@ -50,15 +50,15 @@ const Header = () => {
 
   return (
     <>
-      <header className="max-w-[1440px] h-[80px] items-center relative z-[100]">
-        <div className="w-screen fixed py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] bg-[#fff]   z-index: 80;  border-b-[1px] border-[#F2F4F7] border-solid flex justify-between items-center">
+      <header className="max-w-[1440px] h-[80px] items-center relative z-[100]  border-b-[1px] border-[#F2F4F7] border-solid">
+        <div className="w-screen  h-[79px] fixed py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] bg-[#fff] z-index: 80 flex justify-between items-center">
           <div className="min-w-[128px] min-h-[26.32px]">
             <Link to={"/"}>
               <img src="/logo.png"></img>
             </Link>
           </div>
 
-          <div className="flex justify-center items-center gap-[32px] max-w-[952px] h-[24px] text-gray-500 font-medium font-inter menu-breakmax:hidden">
+          <div className="flex justify-center items-center gap-[32px] max-w-[952px] h-[24px] text-[#667085] font-medium font-inter menu-breakmax:hidden">
             <button onClick={() => handleHome()}>Home</button>
             <Link
               onClick={() => setIsResourcesOpen(!isResourcesOpen)}
@@ -67,7 +67,7 @@ const Header = () => {
               }`}
             >
               Resources
-              <span>
+              <span >
                 <img src={isResourcesOpen ? "/up.png" : "/down.png"} />
               </span>
             </Link>
@@ -81,7 +81,7 @@ const Header = () => {
           >
             <img
               src={isModalOpen ? "/close.png" : "/menubutton.png"}
-              className="absolute right-10 top-2.5"
+              className="absolute right-10 top-5"
             />
           </button>
 
@@ -99,7 +99,7 @@ const Header = () => {
       {/* FOR SCREEN THAT <960PX , TOGGLE MENU*/}
       {isModalOpen ? (
         <div className="fixed top-[53px] right-0 z-[90] bg-[#fff] py-6 xs:w-full w-[375px] menu-breakmin:hidden">
-          <Link to="/" className="py-2 px-4 font-medium text-sm text-gray-500">
+          <Link to="/" className="py-2 px-4 font-medium text-base text-gray-500">
             Home
           </Link>
           <Link
@@ -200,7 +200,7 @@ const Header = () => {
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
         // en dıştaki div bir katman olarak oluşturulu bu katmana tıklayınca resources kapanıyor
-        <div className="w-full h-full z-[20] fixed top-0 left-0 bg-[#0000]">
+        <div className="backlayer w-full h-full z-[20] fixed top-0 left-0 bg-[#0000]">
           <div className="out w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
             <div
               className={`flex gap-12 m-auto items-center max-w-[1216px] h-[156px]`}

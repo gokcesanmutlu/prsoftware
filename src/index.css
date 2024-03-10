@@ -9,6 +9,8 @@
   * {
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
+   
   }
 
   p {
@@ -17,12 +19,16 @@
   }
 
   section {
-    padding: 3.75rem 9.375rem 3.75rem 9.375rem;
+    padding: 6rem 5rem 6rem 5rem;
+    height: auto;
+    width: 100%;
   }
-  @media (max-width: 1100px) {
+  
+  @media (max-width: 1000px) {
     section {
       padding: 30px 75px 30px 75px;
     }
+
     footer {
       display: flex;
       flex-direction: column;
@@ -39,7 +45,7 @@
 
   @media (max-width: 700px) {
     section {
-      padding: 15px 40px 15px 40px;
+      padding: 64px 24px 64px 24px;
     }
   }
 }
@@ -54,6 +60,10 @@
   @apply border-solid border-[1px] border-[#d0d5dd];
 }
 
+.purple-border {
+  @apply border-solid border-[1px] border-[#7F56D9];
+}
+
 .container {
   @apply max920:bg-none max920:h-[400px];
 }
@@ -61,3 +71,4 @@
 .buttons {
   @apply max920:flex-col max920:w-full
 }
+
