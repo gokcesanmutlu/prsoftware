@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 left-0 bg-[#fff] w-full bg-white py-6 px-[75px] flex justify-between items-center">
-      <div>
-        <Link to={"/"}>
-          <img src="/logo.png" alt="Logo" />
-        </Link>
-      </div>
+    <footer className="flex justify-between items-center w-full fixed bottom-0 left-0 bg-[#fff] py-6 px-[75px]">
+      <Link to={"/"}>
+        <img src="/logo.png" alt="Logo" />
+      </Link>
 
       <ul className="flex gap-8 text-gray-600 font-medium">
         <li>

@@ -3,7 +3,6 @@ import Acordeon from "./../components/Acordeon";
 import { Link } from "react-router-dom";
 
 const MainPage = () => {
-
   const accordionItems = [
     {
       id: 1,
@@ -114,32 +113,32 @@ const MainPage = () => {
         </div>
 
         <div className="flex f-c:flex-col f-c:gap-10 gap-6  mt-[64px]">
-          <div className="feature-item flex flex-col gap-1 items-center">
-            <img className="w-[20px] h-[12px]:" src="mail.png" alt="" />
+          <div className="flex flex-col gap-1 items-center">
+            <img className="w-[20px]" src="mail.png" alt="" />
             <h3 style={{ fontSize: "20px", fontWeight: 500 }}>
               Share team inboxes
             </h3>
-            <p>
+            <p className="text-center">
               Whether you have a team of 2 or 200, our shared team inboxes keep
               everyone on the same page and in the loop.
             </p>
           </div>
-          <div className="feature-item flex flex-col gap-1 items-center">
-            <img src="zap.png" alt="" />
+          <div className="flex flex-col gap-1 items-center">
+            <img className="w-[20px]" src="zap.png" alt="" />
             <h3 style={{ fontSize: "20px", fontWeight: 500 }}>
               Deliver instant answers
             </h3>
-            <p>
+            <p className="text-center">
               An all-in-one customer service platform that helps you balance
               everything your customers need to be happy.
             </p>
           </div>
-          <div className="feature-item flex flex-col gap-1 items-center">
-            <img src="bar-chart-2.png" alt="" />
+          <div className="flex flex-col gap-1 items-center">
+            <img className="w-[20px]" src="bar-chart-2.png" alt="" />
             <h3 style={{ fontSize: "20px", fontWeight: 500 }}>
               Manage your team with reports
             </h3>
-            <p>
+            <p className="text-center">
               Measure what matters with Untitled’s easy-to-use reports. You can
               filter, export, and drilldown on the data in a couple click
             </p>

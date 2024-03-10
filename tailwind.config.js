@@ -16,7 +16,9 @@ export default {
       'padding-breakmax': { 'max': '600px' }, // Özel kırılma noktası tanımı
       "f-c": { "max": "768px" },
       "bg": { "max": "1009px" },
-      "footerbreak": { "max": "1117px" }
+      "footerbreak": { "max": "1117px" },
+      "max920": {"max":"920px"},
+      "max700": {"max":"700px"}
     },
     fontFamily: {
       'inter': ['Inter', 'sans-serif'],

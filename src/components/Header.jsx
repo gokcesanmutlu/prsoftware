@@ -50,8 +50,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="header-container max-w-[1440px] h-[80px] items-center relative z-10">
-        <div className="nav py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] border-b-[1px] border-[#F2F4F7] border-solid flex justify-between items-center">
+      <header className="max-w-[1440px] h-[80px] items-center relative z-[100]">
+        <div className="w-screen fixed py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] bg-[#fff]   z-index: 80;  border-b-[1px] border-[#F2F4F7] border-solid flex justify-between items-center">
           <div className="min-w-[128px] min-h-[26.32px]">
             <Link to={"/"}>
               <img src="/logo.png"></img>
@@ -98,8 +98,8 @@ const Header = () => {
 
       {/* FOR SCREEN THAT <960PX , TOGGLE MENU*/}
       {isModalOpen ? (
-        <div className="modal-container py-6 xs:w-full w-[375px] flex flex-col gap-1 menu-breakmin:hidden fixed top-[53px] bg-[#fff]  z-[80px] right-0">
-          <Link to="/" className="py-2 px-4 font-medium text-sm  text-gray-500">
+        <div className="fixed top-[53px] right-0 z-[90] bg-[#fff] py-6 xs:w-full w-[375px] menu-breakmin:hidden">
+          <Link to="/" className="py-2 px-4 font-medium text-sm text-gray-500">
             Home
           </Link>
           <Link
@@ -199,8 +199,9 @@ const Header = () => {
 
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
-        <div className="modal-container h-screen w-screen z-[20px] backlayer">
-          <div className="out w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80px] top-[72px] right-0 ">
+        // en dıştaki div bir katman olarak oluşturulu bu katmana tıklayınca resources kapanıyor
+        <div className="w-full h-full z-[20] fixed top-0 left-0 bg-[#0000]">
+          <div className="out w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
             <div
               className={`flex gap-12 m-auto items-center max-w-[1216px] h-[156px]`}
             >

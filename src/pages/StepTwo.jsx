@@ -172,7 +172,7 @@ const StepTwo = () => {
         {/* Buttons */}
         <div className="h-[44px] gap-4 rounded-[8px] w-full flex">
           <Link className="flex flex-1" to={"/contact/step1"}>
-            <button className="w-full flex items-center justify-center xs:hidden gri-border h-full bg-white text-lg font-semibold px-2 py-1 rounded-[8px]">
+            <button className="w-full flex items-center justify-center xs:hidden border-solid border-[1px] border-[#d0d5dd] h-full bg-white text-lg font-semibold px-2 py-1 rounded-[8px]">
               <img src="/arrowleft.png" alt="" />
               <span className="text-[#344054]">Back</span>
             </button>

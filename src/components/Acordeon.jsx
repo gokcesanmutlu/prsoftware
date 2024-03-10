@@ -5,22 +5,23 @@ const Acordeon = ({ i }) => {
 
   return (
     <>
-      <div className="flex relative "> 
-        <div className="left">
-          <div className="question">
-            <p className="font-medium">{i.accordionTitle}</p>
-            <div className={isQuestionOpen ? "" : "hidden"}> 
-              <span>{i.accordionContent}</span>
-            </div>
+      <div className="flex relative  ">
+        <div>
+          <p className="font-medium text-[#101828]">{i.accordionTitle}</p>
+          <div className={isQuestionOpen ? "" : "hidden"}>
+            <span className="text-[#667085]">{i.accordionContent}</span>
           </div>
         </div>
-        <div className="right">
-          <button className="absolute right-0" onClick={() => setIsQuestionOpen(!isQuestionOpen)}>
-            <img src={isQuestionOpen ? "/minus.png" : "/plus.png"}/>
+        <div>
+          <button
+            className="absolute right-0"
+            onClick={() => setIsQuestionOpen(!isQuestionOpen)}
+          >
+            <img src={isQuestionOpen ? "/minus.png" : "/plus.png"} />
           </button>
         </div>
       </div>
-      <hr />
+      <hr className="text-[#EAECF0]" />
     </>
   );
 };

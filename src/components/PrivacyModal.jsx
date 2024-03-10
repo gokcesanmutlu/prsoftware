@@ -53,10 +53,16 @@ const PrivacyModal = ({ setIsPrivacyOpen }) => {
       </div>
 
       <div className="buttons flex justify-center gap-2 rounded-[8px] pb-2">
-        <button onClick={closeModal} className="flex flex-1 h-[30px] py-[2px] items-center justify-center bg-white text-[#344054] font-semibold gri-border  rounded-[8px]">
+        <button
+          onClick={closeModal}
+          className="flex flex-1 h-[30px] py-[2px] items-center justify-center bg-white text-[#344054] font-semibold rounded-[8px]"
+        >
           Cancel
         </button>
-        <Link to={"/contact/step1"} className="btn flex h-[30px] flex-1 items-center justify-center ">
+        <Link
+          to={"/contact/step1"}
+          className="btn flex h-[30px] flex-1 items-center justify-center "
+        >
           Contact Us
         </Link>
       </div>

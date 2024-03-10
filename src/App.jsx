@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
 import MainPage from "./pages/MainPage";
+import AboutPage from "./pages/AboutPage";
 import PressPage from "./pages/PressPage";
 import CareerPage from "./pages/CareerPage";
-import AboutPage from "./pages/AboutPage";
-import Help from "./pages/Help";
 import Legal from "./components/Legal";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Help from "./pages/Help";
+import Pricing from "./pages/Pricing";
+import PrivacyPage from "./pages/PrivacyPage";
 import StepOne from "./pages/StepOne";
 import StepTwo from "./pages/StepTwo";
 import StepSuccess from "./pages/StepSuccess";
-import Pricing from "./pages/Pricing";
 import PrivacyModal from "./components/PrivacyModal";
-import PrivacyPage from "./pages/PrivacyPage";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (

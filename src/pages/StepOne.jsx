@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const StepOne = () => {
-  const location = useLocation();
-  const currentStep = location.pathname.split("/").pop(); // Mevcut adımı alma
-  console.log(currentStep) //step1
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  // Seçeneklerin tıklanması durumunda çağrılacak fonksiyon
+  const handleOptionClick = (index) => {
+    setSelectedOption(index);
+  };
+
   return (
     <div className="w-screen h-screen flex items-center justify-center mt-[-100px]">
       <div className="flex justify-center items-center flex-col gap-10">
@@ -33,9 +37,15 @@ const StepOne = () => {
             What kind of plan is most suitable for you?
           </p>
           {/* şıklar */}
-          <div className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-3">
             {/* 1. şık */}
-            <div className="flex  gap-3 p-2 rounded-[8px]  border-[1px] border-solid border-[#D0D5DD]">
+            <li
+              className="flex  gap-3 p-2 rounded-[8px]  border-[1px] gri-border"
+              onClick={() => handleOptionClick(0)}
+              style={{
+                backgroundColor: selectedOption === 0 ? "pink" : "transparent",
+              }}
+            >
               <div className="left w-6 h-6">
                 <img className="w-full" src="/frame1.svg" alt="" />
               </div>
@@ -46,10 +56,16 @@ const StepOne = () => {
                   For individual designer and developer.
                 </p>
               </div>
-            </div>
+            </li>
 
             {/* 2. şık */}
-            <div className="flex gap-3 p-2 rounded-[8px] border-[1px] border-solid border-[#D0D5DD]">
+            <li
+              className="flex gap-3 p-2 rounded-[8px] border-[1px] gri-border"
+              onClick={() => handleOptionClick(1)}
+              style={{
+                backgroundColor: selectedOption === 1 ? "pink" : "transparent",
+              }}
+            >
               <div className="left w-6 h-6">
                 <img className="w-full" src="/frame.svg" alt="" />
               </div>
@@ -60,10 +76,16 @@ const StepOne = () => {
                   For small team of designers and developers.
                 </p>
               </div>
-            </div>
+            </li>
 
             {/* 3. şık */}
-            <div className=" flex gap-3 p-2 rounded-[8px]  border-[1px] border-solid border-[#D0D5DD]">
+            <li
+              className=" flex gap-3 p-2 rounded-[8px]  gri-border"
+              onClick={() => handleOptionClick(2)}
+              style={{
+                backgroundColor: selectedOption === 2 ? "pink" : "transparent",
+              }}
+            >
               <div className="left w-6 h-6">
                 <img className="w-full" src="/frame3.svg" alt="" />
               </div>
@@ -74,8 +96,8 @@ const StepOne = () => {
                   For larger design and development teams.
                 </p>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
         <Link className="w-full" to={"/contact/step2"}>
