@@ -43,10 +43,10 @@ const MainPage = () => {
   ];
 
   return (
-    <div>
+    <div className="backlayer w-full h-auto">
       {/* SECTION BANNER */}
-      <section className="backlayer">
-        <div className="flex flex-col items-center gap-8 ">
+      <section>
+        <div className="flex flex-col items-center gap-8">
           <div className="text-[#7F56D9] xs:text-xs bg-[#F9F5FF] font-medium rounded-2xl w-fit text-[14px] flex justify-center items-center gap-3 xs:gap-1 py-1 p-[10px]">
             <button className="bg-[#fff] rounded-2xl py-[2px] px-[10px]">
               New feature

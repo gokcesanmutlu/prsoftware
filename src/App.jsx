@@ -17,24 +17,24 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/contact/step1" element={<StepOne />} />
-        <Route path="/contact/step2" element={<StepTwo />} />
-        <Route path="/contact/step3" element={<StepSuccess />} />
-        <Route path="/press" element={<PressPage />} />
-        <Route path="/career" element={<CareerPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/legal" element={<Legal />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/modal" element={<PrivacyModal />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  </>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/contact/step1" element={<StepOne />} />
+          <Route path="/contact/step2" element={<StepTwo />} />
+          <Route path="/contact/step3" element={<StepSuccess />} />
+          <Route path="/press" element={<PressPage />} />
+          <Route path="/career" element={<CareerPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/legal" element={<Legal />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/modal" element={<PrivacyModal />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 };
 

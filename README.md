@@ -8,7 +8,7 @@ LIBRARIES
 ÖZELLİKLER
 
 - Navbar responsive'dir, resources'a tıkladığınızda alt menu açılır.
-- Sayfada Resources yapısı altındaki alt menu dışında başka bir yere tıkladığınızda resources kendiliğinden kapanacaktır. (Bu durumu sağlamak için sayfa ile resources arasına transparan bir katman ekledim.)
+- Sayfada Resources yapısı altındaki alt menu dışında başka bir linke veya mainpage'daki herhangi bir yere tıkladığınızda resources kendiliğinden kapanacaktır.
 - Bu alt menülerin her biri düzenlenmiştir. Bu sayfaların yönlendirmesinde react-router-dodm kullanılmıştır.
 - Sitede gördüğünüz tüm Contact us butonları sizi bizimle iletişim kuarbileceğiniz forma yönlendirmektedir.
 - Sıkça sorulan sorular kısmındaki + ve -'ler sorunun cevabının açık olup olmamasına göre değişmektedir.

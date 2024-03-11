@@ -19,6 +19,9 @@ const PressPage = () => {
             <p className="text-lg mb-4">
               Etiam posuere volutpat sapien, eget tempor ligula feugiat nec. Nulla facilisi. Nam consequat nisi ut sem ultricies tempus. Integer feugiat erat vitae neque convallis sollicitudin. Cras varius augue ac ipsum sollicitudin volutpat. Vestibulum sollicitudin mauris eget lacinia vulputate.
             </p>
+            <p className="text-lg mb-4">
+              Vestibulum in tellus vel turpis vestibulum fermentum eget a sem. Fusce feugiat nisi justo, at tristique velit tincidunt id. Sed ultrices efficitur dolor eget sollicitudin. In aliquet velit ac lacus volutpat mollis. Phasellus porttitor risus non ante mattis, vitae rhoncus est aliquet. Vestibulum non massa et orci congue suscipit.
+            </p>
           </div>
         </div>
       </div>
