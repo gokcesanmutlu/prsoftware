@@ -120,17 +120,7 @@ const Header = () => {
                 className={`flex flex-col gap-8 m-auto items-center w-full h-[auto]`}
               >
                 <Link to={"/about"}>
-                  <div className="flex gap-2">
-                    <div className="left">
-                      <img src="/featuredicon3.png" alt="" />
-                    </div>
-                    <div className="right">
-                      <h3 className="font-medium">About us</h3>
-                      <p className="text-sm">
-                        Learn about our story and our mission statement.
-                      </p>
-                    </div>
-                  </div>
+              about
                 </Link>
                 <Link to={"/press"}>
                   <div className="flex gap-2">
@@ -197,14 +187,15 @@ const Header = () => {
         ""
       )}
 <Link to={"/about"}>click </Link>
+
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
         // en dıştaki div bir katman olarak oluşturulu bu katmana tıklayınca resources kapanıyor
-        <div className="backlayer z-[20] px-8">
+        <div className=" z-[20] px-8">
           <div className="w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
             <div
               className={`flex gap-12 m-auto items-center max-w-[1070px] h-[156px]`}
-            > <Link to={"/about"}>click </Link>
+            > <Link to="/about">click </Link>
               <Link to="/about">
                 <div className="flex gap-2">
                   <div className="left">
