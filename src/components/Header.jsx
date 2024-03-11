@@ -1,65 +1,20 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const navigate = useNavigate();
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleContact = () => {
-    setIsResourcesOpen(false);
-    navigate("/contact/step1");
-  };
-
-  const handleHome = () => {
-    setIsResourcesOpen(false);
-    navigate("/");
-  };
-  const handlePricing = () => {
-    setIsResourcesOpen(false);
-    navigate("/pricing");
-  };
-
-  useEffect(() => {
-    // isResourcesOpen durumu değiştiğinde, handleClick olayını ekleyin veya kaldırın
-    if (isResourcesOpen) {
-      const backlayer = document.querySelector(".backlayer");
-      if (backlayer) {
-        backlayer.addEventListener("click", handleClick);
-      }
-    } else {
-      const backlayer = document.querySelector(".backlayer");
-      if (backlayer) {
-        backlayer.removeEventListener("click", handleClick);
-      }
-    }
-
-    // Cleanup işlevi - bileşen unmount edildiğinde olay dinleyicisini kaldır
-    return () => {
-      const backlayer = document.querySelector(".backlayer");
-      if (backlayer) {
-        backlayer.removeEventListener("click", handleClick);
-      }
-    };
-  }, [isResourcesOpen]);
-
-  const handleClick = () => {
-    setIsResourcesOpen(false);
-  };
-
   return (
     <>
-      <header className="header-container max-w-[1440px] h-[80px] items-center relative z-10">
-        <div className="nav py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] border-b-[1px] border-[#F2F4F7] border-solid flex justify-between items-center">
+      <header className="max-w-[1440px] h-[80px] items-center relative">
+        <div className="nav py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] border-b-[1px] border-[#F2F4F7] border-solid flex justify-between items-center   ">
           <div className="min-w-[128px] min-h-[26.32px]">
-            <Link to={"/"}>
-              <img src="/logo.png"></img>
-            </Link>
+            <img src="logo.png"></img>
           </div>
 
-          <div className="flex justify-center items-center gap-[32px] max-w-[952px] h-[24px] text-gray-500 font-medium font-inter menu-breakmax:hidden">
-            <button onClick={() => handleHome()}>Home</button>
+          <div className="flex justify-center items-center gap-[32px] max-w-[952px] h-[24px] text-gray-500 menu-breakmax:hidden">
+            <Link to="/">Home</Link>
             <Link
               onClick={() => setIsResourcesOpen(!isResourcesOpen)}
               className={`flex justify-center items-center p-2 rounded-md gap-[8px] ${
@@ -68,10 +23,10 @@ const Header = () => {
             >
               Resources
               <span>
-                <img src={isResourcesOpen ? "/up.png" : "/down.png"} />
+                <img src={isResourcesOpen ? "up.png" : "Icon.png"} />
               </span>
             </Link>
-            <button onClick={() => handlePricing()}>Pricing</button>
+            <Link to="/pricing">Pricing</Link>
           </div>
 
           {/* 960 PX'DEN KÜÇÜK EKRANLAR İÇİN */}
@@ -79,18 +34,11 @@ const Header = () => {
             onClick={() => setIsModalOpen(!isModalOpen)}
             className="menu-breakmin:hidden"
           >
-            <img
-              src={isModalOpen ? "/close.png" : "/menubutton.png"}
-              className="absolute right-10 top-2.5"
-            />
+            <img src={isModalOpen ? "/close.png" : "/menubutton.png"} />
           </button>
 
           {/* Tam ekran HEADER CONTACT */}
-
-          <button
-            onClick={() => handleContact()}
-            className="menu-breakmax:hidden h-[44px] w-[122px] text-[#fff] font-medium bg-purpleo rounded-[8px]"
-          >
+          <button className="menu-breakmax:hidden h-[44px] w-[122px] xs:hidden text-[#fff] font-medium bg-purpleo rounded-[8px]">
             Contact Us
           </button>
         </div>
@@ -98,8 +46,8 @@ const Header = () => {
 
       {/* FOR SCREEN THAT <960PX , TOGGLE MENU*/}
       {isModalOpen ? (
-        <div className="modal-container py-6 xs:w-full w-[375px] flex flex-col gap-1 menu-breakmin:hidden fixed top-[53px] bg-[#fff]  z-[80px] right-0">
-          <Link to="/" className="py-2 px-4 font-medium text-sm  text-gray-500">
+        <div className="py-6 w-[375px] flex flex-col gap-1 menu-breakmin:hidden fixed top-[72px] bg-[#fff] z-[80px] right-0">
+          <Link to="/" className="py-2 px-4 font-medium">
             Home
           </Link>
           <Link
@@ -109,7 +57,7 @@ const Header = () => {
           >
             Resources
             <span>
-              <img src={isResourcesOpen ? "/up.png" : "/down.png"} />
+              <img src={isResourcesOpen ? "up.png" : "Icon.png"} />
             </span>
           </Link>
 
@@ -119,92 +67,6 @@ const Header = () => {
               <div
                 className={`flex flex-col gap-8 m-auto items-center w-full h-[auto]`}
               >
-                <Link to={"/about"}>
-                  <div className="flex gap-2">
-                    <div className="left">
-                      <img src="/featuredicon3.png" alt="" />
-                    </div>
-                    <div className="right">
-                      <h3 className="font-medium">About us</h3>
-                      <p className="text-sm">
-                        Learn about our story and our mission statement.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-                <Link to={"/press"}>
-                  <div className="flex gap-2">
-                    <div className="left">
-                      <img src="/featuredicon2.png" alt="" />
-                    </div>
-                    <div className="right">
-                      <h3 className="font-medium">Press</h3>
-                      <p className="text-sm">
-                        News and writings, press releases, and resources
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-                <Link to={"/career"}>
-                  <div className="flex gap-2">
-                    <div className="left">
-                      <img src="/featuredicon1.png" alt="" />
-                    </div>
-                    <div className="right">
-                      <h3 className="font-medium">Careers</h3>
-                      <p className="text-sm">
-                        We’re always looking for talented people. Join us!
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-                <Link to={"/legal"}>
-                  <div className="flex gap-2">
-                    <div className="left">
-                      <img src="/featuredicon4.png" alt="" />
-                    </div>
-                    <div className="right">
-                      <h3 className="font-medium">Legal</h3>
-                      <p className="text-sm">
-                        All the boring stuff that we Dan from legal made us add.
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-
-              <div className="py-[20px] bg-[#F9F5FF] w-full h-auto flex flex-col items-center justify-center ">
-                <a className=" text-[#7F56D9]" href="/">
-                  Looking for a new career? Get in touch
-                </a>
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
-          <Link to={"/pricing"} className="py-3 px-4 font-medium">
-            Pricing
-          </Link>
-          <div className="w-full flex justify-center ">
-            <Link to={"/contact/step1"}>
-              <button className="menu-breakmin:hidden h-[44px] w-[122px] xs:hidden text-[#fff] font-medium bg-purpleo px-[18px] py-[10px] rounded-[8px]">
-                Contact Us
-              </button>
-            </Link>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
-
-      {/* BÜYÜK EKRANDA RESOURCES */}
-      {isResourcesOpen ? (
-        <div className="modal-container h-screen w-screen z-[20px] backlayer">
-          <div className="out w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80px] top-[72px] right-0 ">
-            <div
-              className={`flex gap-12 m-auto items-center max-w-[1216px] h-[156px]`}
-            >
-              <Link to={"/about"}>
                 <div className="flex gap-2">
                   <div className="left">
                     <img src="/featuredicon3.png" alt="" />
@@ -215,9 +77,7 @@ const Header = () => {
                       Learn about our story and our mission statement.
                     </p>
                   </div>
-                </div>{" "}
-              </Link>
-              <Link to={"/press"}>
+                </div>
                 <div className="flex gap-2">
                   <div className="left">
                     <img src="/featuredicon2.png" alt="" />
@@ -229,8 +89,6 @@ const Header = () => {
                     </p>
                   </div>
                 </div>
-              </Link>
-              <Link to={"/career"}>
                 <div className="flex gap-2">
                   <div className="left">
                     <img src="/featuredicon1.png" alt="" />
@@ -242,8 +100,6 @@ const Header = () => {
                     </p>
                   </div>
                 </div>
-              </Link>
-              <Link to={"/legal"}>
                 <div className="flex gap-2">
                   <div className="left">
                     <img src="/featuredicon4.png" alt="" />
@@ -255,7 +111,80 @@ const Header = () => {
                     </p>
                   </div>
                 </div>
-              </Link>
+              </div>
+              <div className="py-[20px] bg-[#F9F5FF] w-full h-auto flex flex-col items-center justify-center ">
+                <a className=" text-[#7F56D9]" href="/">
+                  Looking for a new career? Get in touch
+                </a>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+          <Link className="py-3 px-4 font-medium" to="/">
+            Pricing
+          </Link>
+          <div className="w-full flex justify-center ">
+            <button className="menu-breakmin:hidden h-[44px] w-[122px] xs:hidden text-[#fff] font-medium bg-purpleo px-[18px] py-[10px] rounded-[8px]">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+
+      {/* BÜYÜK EKRANDA RESOURCES */}
+      {isResourcesOpen ? (
+  
+          <div className="out w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80px] top-[72px] right-0 ">
+            <div
+              className={`flex gap-12 m-auto items-center max-w-[1216px] h-[156px]`}
+            >
+              <div className="flex gap-2">
+                <div className="left">
+                  <img src="/featuredicon3.png" alt="" />
+                </div>
+                <div className="right">
+                  <h3 className="font-medium">About us</h3>
+                  <p className="text-sm">
+                    Learn about our story and our mission statement.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className="left">
+                  <img src="/featuredicon2.png" alt="" />
+                </div>
+                <div className="right">
+                  <h3 className="font-medium">Press</h3>
+                  <p className="text-sm">
+                    News and writings, press releases, and resources
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className="left">
+                  <img src="/featuredicon1.png" alt="" />
+                </div>
+                <div className="right">
+                  <h3 className="font-medium">Careers</h3>
+                  <p className="text-sm">
+                    We’re always looking for talented people. Join us!
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className="left">
+                  <img src="/featuredicon4.png" alt="" />
+                </div>
+                <div className="right">
+                  <h3 className="font-medium">Legal</h3>
+                  <p className="text-sm">
+                    All the boring stuff that we Dan from legal made us add.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="py-[20px] bg-[#F9F5FF] w-full h-auto flex items-center justify-center ">
               <a className=" text-[#7F56D9]" href="/">
@@ -263,7 +192,7 @@ const Header = () => {
               </a>
             </div>
           </div>
-        </div>
+      
       ) : (
         ""
       )}
