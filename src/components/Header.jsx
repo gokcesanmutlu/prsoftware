@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <>
       <header className="max-w-[1440px] h-[80px] items-center relative [100]  border-b-[1px] border-[#F2F4F7] border-solid">
-        <div className="w-screen h-[79px] fixed py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] bg-[#fff] z-index: 80 flex justify-between items-center">
+        <div className="w-screen h-[79px] fixed py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] bg-[#fff] z-30 flex justify-between items-center">
           <div className="min-w-[128px] min-h-[26.32px]">
             <Link to={"/"}>
               <img src="/logo.png"></img>
@@ -98,7 +98,7 @@ const Header = () => {
 
       {/* FOR SCREEN <960PX, TOGGLE MENU*/}
       {isModalOpen ? (
-        <div className="fixed top-[53px] right-0 z-[90] bg-[#fff] py-6 xs:w-full w-[375px] menu-breakmin:hidden">
+        <div className="fixed top-[53px] right-0 z-30 bg-[#fff] py-6 xs:w-full w-[375px] menu-breakmin:hidden">
           <Link
             to="/"
             className="py-2 px-4 font-medium text-base text-gray-500"
@@ -205,8 +205,8 @@ const Header = () => {
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
         // en dıştaki div bir katman olarak oluşturuldu bu katmana tıklayınca resources kapanıyor
-        <div className="backlayer z-[20px]">
-          <div className="w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80px] top-[72px] right-0 ">
+        <div className="backlayer z-10">
+          <div className="w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-30 top-[72px] right-0 ">
             <div
               className={`flex justify-center gap-4 m-auto items-center max-w-[1070px] h-[156px] px-12
               `}
