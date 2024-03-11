@@ -8,7 +8,6 @@ import CareerPage from "./pages/CareerPage";
 import Legal from "./components/Legal";
 import Help from "./pages/Help";
 import Pricing from "./pages/Pricing";
-import PrivacyPage from "./pages/PrivacyPage";
 import StepOne from "./pages/StepOne";
 import StepTwo from "./pages/StepTwo";
 import StepSuccess from "./pages/StepSuccess";

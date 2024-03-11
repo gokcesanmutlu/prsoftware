@@ -115,7 +115,7 @@ const Header = () => {
 
           {/* KÜÇÜK EKRANDA RESOURCES menüsünün açıldığı durum */}
           {isResourcesOpen ? (
-            <div className="out px-2 w-full h-auto menu-breakmin:hidden   ">
+            <div className="out px-2 w-full h-auto menu-breakmin:hidden">
               <div
                 className={`flex flex-col gap-8 m-auto items-center w-full h-[auto]`}
               >
@@ -200,8 +200,8 @@ const Header = () => {
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
         // en dıştaki div bir katman olarak oluşturulu bu katmana tıklayınca resources kapanıyor
-        <div className="backlayer w-full h-full z-[20] fixed top-0 left-0 bg-[#0000] px-8">
-          <div className="out w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
+        <div className="backlayer z-[20] px-8">
+          <div className="w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
             <div
               className={`flex gap-12 m-auto items-center max-w-[1070px] h-[156px]`}
             >
@@ -216,7 +216,7 @@ const Header = () => {
                       Learn about our story and our mission statement.
                     </p>
                   </div>
-                </div>{" "}
+                </div>
               </Link>
               <Link to={"/press"}>
                 <div className="flex gap-2">

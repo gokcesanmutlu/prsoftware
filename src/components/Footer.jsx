@@ -28,7 +28,7 @@ function Footer() {
           <Link to="/help">Help</Link>
         </li>
         <li className="bg:pr-12 ">
-          <Link to="/privacy">Privacy</Link>
+          <Link to="#">Privacy</Link>
         </li>
       </ul>
 
