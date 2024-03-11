@@ -204,7 +204,7 @@ const Header = () => {
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
         // en dıştaki div bir katman olarak oluşturulu bu katmana tıklayınca resources kapanıyor
-        <div className="backlayer z-[20] px-8">
+        <div className=" z-[20] px-8">
           <div className="w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
             <div
               className={`flex  justify-center gap-4 m-auto items-center max-w-[1070px] h-[156px] px-12

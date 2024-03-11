@@ -32,7 +32,7 @@ const StepTwo = () => {
       <div className="flex justify-center items-center flex-col gap-10">
         
         {/* STEP BUTTONS */}
-        <div className="steps flex justify-center gap-1 rounded-[16px] bg-[#F9F5FF] py-1 px-[10px]">
+        <div className="flex justify-center gap-1 rounded-[16px] bg-[#F9F5FF] py-1 px-[10px]">
           <Link
             to={"/contact/step1"}
             className="py-[2px] px-[10px] text-[#7F56D9] bg-[#fff] rounded-[16px]"
