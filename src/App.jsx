@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
+    <>
     <BrowserRouter>
       <Header />
       <Routes>
@@ -28,13 +29,13 @@ const App = () => {
         <Route path="/career" element={<CareerPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/help" element={<Help />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/legal" element={<Legal />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/modal" element={<PrivacyModal />} />
       </Routes>
       <Footer />
     </BrowserRouter>
+  </>
   );
 };
 

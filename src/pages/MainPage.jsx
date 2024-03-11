@@ -154,7 +154,7 @@ const MainPage = () => {
       </section>
 
       {/* SECTION FAQ */}
-      <section className="flex flex-col gap-[40px]   justify-between">
+      <section className="flex flex-col gap-[40px] max-w-[880px] m-auto ">
         <div>
           <h2
             className="text-center font-semibold pb-[12px]"
@@ -167,7 +167,7 @@ const MainPage = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6 container m-auto  h-fit">
+        <div className="flex flex-col gap-6 h-auto ">
           {accordionItems.map((i, key) => (
             <Acordeon i={i} key={i.id} />
           ))}
@@ -175,8 +175,8 @@ const MainPage = () => {
       </section>
 
       {/* SECTION CTO */}
-      <section className="bg-[#F9F5FF]   ">
-        <div className="flex flex-col  gap-[40px]">
+      <section className="bg-[#F9F5FF]  h-auto  ">
+        <div className="flex flex-col items-center justify-center gap-[40px]">
           <div className="flex flex-col gap-3">
             <h2
               className="text-center font-semibold"

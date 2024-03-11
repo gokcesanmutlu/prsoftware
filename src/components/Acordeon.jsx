@@ -5,7 +5,7 @@ const Acordeon = ({ i }) => {
 
   return (
     <>
-      <div className="flex justify-between ">
+      <div className="flex justify-between  h-auto">
         <div>
           <p className="font-medium text-[#101828]">{i.accordionTitle}</p>
           <div className={isQuestionOpen ? "" : "hidden"}>
