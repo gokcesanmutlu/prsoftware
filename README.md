@@ -16,3 +16,12 @@ LIBRARIES
 - Step ikide formik ve yup kullanılarak girdiğiniz bilgilerin validasyonlarının yapılması sağlanmıştır.
 - Step ikideki privacy policy kısmına tıkladığınızda ayrı bir modal açılacaktır.
 - Footer'daki Linkler de aktiftir. (privacy hariç ayrıca bir sayfa düzenleme gereksinimi duymadım figmada olduğu için silmek de istemedim)
+
+ÜZERİNDE ÇALIŞILACAK HUSUSLAR
+
+- footer'ın responsiveliği ve konumu 
+- resources sadece main page ve header'daki linklere tıklayınca kapanıyo, bunu kendi dışında her yere tıklayınca
+  kapanacak şekilde ayarlayabilirsin
+- Step buttonlara tick eklenecek 
+- gölgelendirmeler eklencek
+- career sayfasında yup ve formik kullanılarak orası işlev görecek hale getirilmeli
