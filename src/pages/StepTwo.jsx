@@ -60,7 +60,6 @@ const StepTwo = () => {
             }}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting }) => {
-              // Validation passed, handle submission
               console.log(values);
               setSubmitting(false);
             }}
