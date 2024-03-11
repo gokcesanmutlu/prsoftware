@@ -61,10 +61,7 @@
 .gri-border {
   @apply border-solid border-[1px] border-[#d0d5dd];
 }
-.backlayer {
-  @apply fixed top-0 left-0 w-full h-full bg-[#0000];
- 
-}
+
 .purple-border {
   @apply border-solid border-[1px] border-[#7F56D9];
 }
