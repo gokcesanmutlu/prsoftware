@@ -13,22 +13,22 @@ function Footer() {
 
       <ul className="flex flex-wrap px-12 bg:px-0 gap-6 text-[#344054] text-xs font-medium">
         <li className="bg:pr-12 ">
-          <Link to="/">Home</Link>
+          <Link to={"/"}>Home</Link>
         </li>
         <li className="bg:pr-12 ">
-          <Link to="/about">About Us</Link>
+          <Link to={"/about"}>About Us</Link>
         </li>
         <li className="bg:pr-12 ">
-          <Link to="/press">Press</Link>
+          <Link to={"/press"}>Press</Link>
         </li >
         <li className="bg:pr-16">
-          <Link to="/career">Career</Link>
+          <Link to={"/career"}>Career</Link>
         </li>
         <li className="bg:pr-12 ">
-          <Link to="/help">Help</Link>
+          <Link to={"/help"}>Help</Link>
         </li>
         <li className="bg:pr-12 ">
-          <Link to="#">Privacy</Link>
+          <Link to={"#"}>Privacy</Link>
         </li>
       </ul>
 

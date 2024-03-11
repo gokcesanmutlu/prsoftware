@@ -218,6 +218,7 @@ const Header = () => {
                   </div>
                 </div>
               </Link>
+
               <Link to={"/press"}>
                 <div className="flex gap-2">
                   <div className="left">
@@ -231,6 +232,7 @@ const Header = () => {
                   </div>
                 </div>
               </Link>
+
               <Link to={"/career"}>
                 <div className="flex gap-2">
                   <div className="left">
@@ -244,6 +246,7 @@ const Header = () => {
                   </div>
                 </div>
               </Link>
+
               <Link to={"/legal"}>
                 <div className="flex gap-2">
                   <div className="left">
@@ -257,6 +260,7 @@ const Header = () => {
                   </div>
                 </div>
               </Link>
+              
             </div>
             <div className="py-[20px] bg-[#F9F5FF] w-full h-auto flex items-center justify-center ">
               <a className=" text-[#7F56D9]" href="/">
