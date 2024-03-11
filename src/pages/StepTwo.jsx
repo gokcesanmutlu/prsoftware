@@ -28,8 +28,9 @@ const StepTwo = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center mt-[-100px]">
+    <div className="w-full h-full flex items-center justify-center mt-2">
       <div className="flex justify-center items-center flex-col gap-10">
+        
         {/* STEP BUTTONS */}
         <div className="steps flex justify-center gap-1 rounded-[16px] bg-[#F9F5FF] py-1 px-[10px]">
           <Link
@@ -174,7 +175,7 @@ const StepTwo = () => {
               <u> privacy policy</u>
             </Link>
             {isPrivacyOpen ? (
-              <PrivacyModal setIsPrivacyOpen={setIsPrivacyOpen} />
+              <PrivacyModal />
             ) : (
               " "
             )}

@@ -67,7 +67,7 @@ const Header = () => {
               }`}
             >
               Resources
-              <span >
+              <span>
                 <img src={isResourcesOpen ? "/up.png" : "/down.png"} />
               </span>
             </Link>
@@ -99,7 +99,10 @@ const Header = () => {
       {/* FOR SCREEN THAT <960PX , TOGGLE MENU*/}
       {isModalOpen ? (
         <div className="fixed top-[53px] right-0 z-[90] bg-[#fff] py-6 xs:w-full w-[375px] menu-breakmin:hidden">
-          <Link to="/" className="py-2 px-4 font-medium text-base text-gray-500">
+          <Link
+            to="/"
+            className="py-2 px-4 font-medium text-base text-gray-500"
+          >
             Home
           </Link>
           <Link
@@ -115,12 +118,23 @@ const Header = () => {
 
           {/* KÜÇÜK EKRANDA RESOURCES menüsünün açıldığı durum */}
           {isResourcesOpen ? (
-            <div className="out px-2 w-full h-auto menu-breakmin:hidden">
+            <div className="out px-2 w-full h-auto menu-breakmin:hidden   ">
               <div
                 className={`flex flex-col gap-8 m-auto items-center w-full h-[auto]`}
               >
-                <Link to={"/about"}>
-              about
+                {" "}
+                <Link to={"/press"}>
+                  <div className="flex gap-2">
+                    <div className="left">
+                      <img src="/featuredicon3.png" alt="" />
+                    </div>
+                    <div className="right">
+                      <h3 className="font-medium">About us</h3>
+                      <p className="text-sm">
+                        Learn about our story and our mission statement.
+                      </p>
+                    </div>
+                  </div>
                 </Link>
                 <Link to={"/press"}>
                   <div className="flex gap-2">
@@ -190,11 +204,12 @@ const Header = () => {
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
         // en dıştaki div bir katman olarak oluşturulu bu katmana tıklayınca resources kapanıyor
-        <div className=" z-[20] px-8">
+        <div className="backlayer z-[20] px-8">
           <div className="w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
             <div
-              className={`flex gap-12 m-auto items-center max-w-[1070px] h-[156px]`}
-            > 
+              className={`flex  justify-center gap-4 m-auto items-center max-w-[1070px] h-[156px] px-12
+              `}
+            >
               <Link to="/about">
                 <div className="flex gap-2">
                   <div className="left">
@@ -250,7 +265,6 @@ const Header = () => {
                   </div>
                 </div>
               </Link>
-
             </div>
             <div className="py-[20px] bg-[#F9F5FF] w-full h-auto flex items-center justify-center ">
               <a className=" text-[#7F56D9]" href="/">

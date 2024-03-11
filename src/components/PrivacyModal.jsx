@@ -1,15 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PrivacyModal = ({ setIsPrivacyOpen }) => {
-  const closeModal = () => {
-    setIsPrivacyOpen(false); // Modal'ı kapatmak için setIsModalOpen fonksiyonunu çağırıyoruz
-  };
-
+const PrivacyModal = () => {
   return (
-    <div className="w-screen h-screen bg-[#fff] p-[80px]">
+    <div className="w-full h-full bg-[#fff] p-[80px]">
       <div>
-        <h3 className="font-medium  text-md ">PRIVACY POLICY</h3>
+        <h3 className="font-medium text-md ">PRIVACY POLICY</h3>
         <br />
         <p className=" text-md">
           Your privacy is important to us. We respect your privacy regarding any
@@ -41,6 +37,12 @@ const PrivacyModal = ({ setIsPrivacyOpen }) => {
             fringilla.
             <br />
             <br />
+            Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla
+            odio nisl vitae. In aliquet pellentesque aenean hac vestibulum
+            turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada
+            fringilla.
+            <br />
+            <br />
             Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet
             commodo consectetur convallis risus. Sed condimentum enim dignissim
             adipiscing faucibus consequat, urna. Viverra purus et erat auctor
@@ -52,16 +54,16 @@ const PrivacyModal = ({ setIsPrivacyOpen }) => {
         </div>
       </div>
 
-      <div className="buttons flex justify-center gap-2 rounded-[8px] pb-2">
-        <button
-          onClick={closeModal}
-          className="flex flex-1 h-[30px] py-[2px] items-center justify-center bg-white text-[#344054] font-semibold rounded-[8px]"
+      <div className="buttons flex justify-center gap-2 rounded-[8px] ">
+        <Link
+          to={"/contact/step2"}
+          className="flex flex-1 h-[30px] py-[2px] items-center justify-center bg-white text-[#344054] font-semibold rounded-[8px] gri-border"
         >
           Cancel
-        </button>
+        </Link>
         <Link
           to={"/contact/step1"}
-          className="btn flex h-[30px] flex-1 items-center justify-center "
+          className="btn flex h-[30px] flex-1 items-center justify-center  "
         >
           Contact Us
         </Link>

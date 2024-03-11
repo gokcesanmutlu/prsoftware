@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Acordeon from "./../components/Acordeon";
 import { Link } from "react-router-dom";
 
@@ -72,9 +72,9 @@ const MainPage = () => {
               <img src="play-circle.png" alt="" />
               <span>Demo</span>
             </button>
-            <button className="text-[#fff] bg-purpleo py-[10px] px-[18px] rounded-lg h-[44px] xs:w-full min-w-[143px]">
-              <Link to={"/contact/step1"}>Contact Us</Link>
-            </button>
+            <Link to={"/contact/step1"} className="text-[#fff] bg-purpleo flex items-center justify-center py-[10px] px-[18px] rounded-lg h-[44px] xs:w-full min-w-[143px]">
+              Contact Us
+            </Link>
           </div>
 
           <div className="flex w-fit h-fit bg:hidden">
