@@ -204,7 +204,7 @@ const Header = () => {
           <div className="w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
             <div
               className={`flex gap-12 m-auto items-center max-w-[1070px] h-[156px]`}
-            ><Link to={"/about"}>click </Link>
+            > <Link to="/about">click </Link>
               <Link to="/about">
                 <div className="flex gap-2">
                   <div className="left">
