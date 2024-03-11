@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+
+
+function Footer() {
   return (
-    <footer className="xs:h-[328px] flex justify-between w-full  bg-[#fff] py-[48px] px-[80px]">
+
+    <footer className="xs:h-[328px] flex justify-between w-full bg-[#fff] py-[48px] px-[80px] menu-breakmax:py-[24px] menu-breakmax:px-[40px]">
       <Link to={"/"}>
         <img src="/logo.png" alt="Logo" />
       </Link>

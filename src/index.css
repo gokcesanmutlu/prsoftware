@@ -37,15 +37,17 @@
     }
 
     footer .links ul {
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-height: 110px;
+       flex-direction: column;
+       max-height: 110px; 
     }
   }
 
   @media (max-width: 700px) {
     section {
       padding: 64px 24px 64px 24px;
+    }
+    footer {
+      padding: 0;
     }
   }
 }
@@ -62,10 +64,6 @@
 
 .purple-border {
   @apply border-solid border-[1px] border-[#7F56D9];
-}
-
-.container {
-  @apply max920:bg-none max920:h-[400px];
 }
 
 .buttons {

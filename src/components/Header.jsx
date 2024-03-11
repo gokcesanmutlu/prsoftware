@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <>
       <header className="max-w-[1440px] h-[80px] items-center relative z-[100]  border-b-[1px] border-[#F2F4F7] border-solid">
-        <div className="w-screen  h-[79px] fixed py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] bg-[#fff] z-index: 80 flex justify-between items-center">
+        <div className="w-screen h-[79px] fixed py-[16px] px-[80px] menu-breakmax:px-[40px] xs:px-[12px] bg-[#fff] z-index: 80 flex justify-between items-center">
           <div className="min-w-[128px] min-h-[26.32px]">
             <Link to={"/"}>
               <img src="/logo.png"></img>
@@ -200,10 +200,10 @@ const Header = () => {
       {/* BÜYÜK EKRANDA RESOURCES */}
       {isResourcesOpen ? (
         // en dıştaki div bir katman olarak oluşturulu bu katmana tıklayınca resources kapanıyor
-        <div className="backlayer w-full h-full z-[20] fixed top-0 left-0 bg-[#0000]">
+        <div className="backlayer w-full h-full z-[20] fixed top-0 left-0 bg-[#0000] px-8">
           <div className="out w-full h-auto menu-breakmax:hidden fixed bg-[#fff] z-[80] top-[72px] right-0 ">
             <div
-              className={`flex gap-12 m-auto items-center max-w-[1216px] h-[156px]`}
+              className={`flex gap-12 m-auto items-center max-w-[1070px] h-[156px]`}
             >
               <Link to={"/about"}>
                 <div className="flex gap-2">
